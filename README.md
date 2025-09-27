@@ -9,7 +9,7 @@ The goal was to transform raw retail sales data into a clean, structured dataset
 - Transforms dataset by:
   - Filtering weekly sales > 10,000
   - Keeping 7 relevant columns
-  - Creating a `month` column from an existing `date` column, then dropping the raw date
+  - Creating a month column from an existing date column, then dropping the raw date
   - Calculating average weekly sales per month, rounded to 2 decimals
 - Loads the final dataset into a clean CSV file for downstream analysis
 
