@@ -24,14 +24,29 @@ The goal was to transform raw retail sales data into a clean, structured dataset
 
 ## How to Run
 ```bash
-git clone https://github.com/nathanjbaron-DE/retail-data-pipeline.git
+# Go to your Documents folder
+cd ~/Documents
 
+# Clone repo
+git clone https://github.com/nathanjbaron-DE/retail-data-pipeline.git
+cd retail-data-pipeline
+
+# Create virtual environment
 python3 -m venv venv
+
+# Activate virtual environment
 source venv/bin/activate
 
+# Upgrade pip
+pip install --upgrade pip
+
+# Install dependencies
 pip install -r requirements.txt
 
-python pipeline.py
+# Run the ETL pipeline (outputs saved in current folder)
+python3 pipeline.py
 
+# Check outputs
 ls *.csv
+
 
