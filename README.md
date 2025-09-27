@@ -24,7 +24,7 @@ The goal was to transform raw retail sales data into a clean, structured dataset
 
 ## How to Run
 ```bash
-# Go to your Documents folder
+# Go to Documents folder
 cd ~/Documents
 
 # Clone repo
