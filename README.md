@@ -15,7 +15,6 @@ The goal was to transform raw retail sales data into a clean, structured dataset
 
 ## Tech Stack
 - Python (pandas)
-- CSV I/O
 - ETL pipeline design
 
 ## Files
@@ -27,3 +26,4 @@ The goal was to transform raw retail sales data into a clean, structured dataset
 ```bash
 pip install -r requirements.txt
 python pipeline.py
+
