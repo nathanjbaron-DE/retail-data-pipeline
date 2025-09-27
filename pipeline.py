@@ -46,31 +46,35 @@ def avg_weekly_sales_per_month(cleaned_data: pd.DataFrame) -> pd.DataFrame:
 # ---------- Load ----------
 def load(cleaned_data: pd.DataFrame, agg_data: pd.DataFrame,
          output_dir: str = "data") -> None:
-    """Save cleaned and aggregated data to CSVs"""
+    """Save cleaned and aggregated data to CSVs in the data folder"""
+    # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
-    cleaned_data.to_csv(f"{output_dir}/clean_data.csv", index=False)
-    agg_data.to_csv(f"{output_dir}/agg_data.csv", index=False)
+    # Save files inside the folder
+    cleaned_data.to_csv(os.path.join(output_dir, "clean_data.csv"), index=False)
+    agg_data.to_csv(os.path.join(output_dir, "agg_data.csv"), index=False)
 
 
 # ---------- Validate ----------
 def validation(file_path: str) -> None:
     """Check if a file exists"""
-    file_exists = os.path.exists(file_path)
-    print(f"{file_path} exists? {file_exists}")
+    print(f"{file_path} exists? {os.path.exists(file_path)}")
 
 
 # ---------- Run ETL ----------
 if __name__ == "__main__":
-    input_csv = "data/grocery_sales.csv"
-    input_parquet = "data/extra_data.parquet"
+    # All input files are expected in the data folder
+    input_csv = os.path.join("data", "grocery_sales.csv")
+    input_parquet = os.path.join("data", "extra_data.parquet")
 
     merged_df = extract(input_csv, input_parquet)
     clean_df = transform(merged_df)
     agg_df = avg_weekly_sales_per_month(clean_df)
 
+    # Save output CSVs in the data folder
     load(clean_df, agg_df, output_dir="data")
 
-    validation("data/clean_data.csv")
-    validation("data/agg_data.csv")
+    # Validate output files
+    validation(os.path.join("data", "clean_data.csv"))
+    validation(os.path.join("data", "agg_data.csv"))
 
     print("ETL complete")
