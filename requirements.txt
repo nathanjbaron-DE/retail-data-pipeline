@@ -1,2 +1,2 @@
 pandas
-os
+pyarrow # if using parquet for read/write
