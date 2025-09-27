@@ -45,7 +45,7 @@ def avg_weekly_sales_per_month(cleaned_data: pd.DataFrame) -> pd.DataFrame:
 
 # ---------- Load ----------
 def load(cleaned_data: pd.DataFrame, agg_data: pd.DataFrame,
-         output_dir: str = "data") -> None:
+         output_dir: str = ".") -> None:
     """Save cleaned and aggregated data to CSVs in the data folder"""
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
