@@ -24,6 +24,11 @@ The goal was to transform raw retail sales data into a clean, structured dataset
 
 ## How to Run
 ```bash
+git clone https://github.com/nathanjbaron-DE/retail-data-pipeline.git
+
+python3 -m venv venv
+source venv/bin/activate
+
 pip install -r requirements.txt
 python pipeline.py
 
