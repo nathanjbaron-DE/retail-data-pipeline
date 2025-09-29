@@ -23,6 +23,7 @@ The goal was to transform raw retail sales data into a clean, structured dataset
   - `extra_data.parquet`
   - `grocery_sales.csv`
 - `requirements.txt` – Python dependencies
+- `README.md` – Project documentation
 
 ## How to Run
 ```bash
