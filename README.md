@@ -19,7 +19,9 @@ The goal was to transform raw retail sales data into a clean, structured dataset
 
 ## Files
 - `pipeline.py` – ETL pipeline script
-- `data/` – sample input and output datasets
+- `data/` Datasets
+  - `extra_data.parquet`
+  - `grocery_sales.csv`
 - `requirements.txt` – Python dependencies
 
 ## How to Run
