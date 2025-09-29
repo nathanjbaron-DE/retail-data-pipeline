@@ -1,7 +1,7 @@
 # Retail Data Pipeline (Python, ETL)
 
 ## Overview
-This project demonstrates an end-to-end ETL (Extract, Transform, Load) process using Python and Pandas.  
+This project demonstrates an end-to-end ETL (Extract, Transform, Load) process using Python and pandas.  
 The goal was to transform raw retail sales data into a clean, structured dataset with aggregated insights.
 
 ## Features
